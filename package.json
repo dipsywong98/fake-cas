@@ -5,7 +5,10 @@
   "repository": {},
   "license": "MIT",
   "scripts": {
-    "build": "webpack -p"
+    "dev": "nodemon server.js",
+    "start": "node server.js",
+    "http": "node server.js",
+    "https": "node ssl.js"
   },
   "devDependencies": {
     "body-parser": "^1.16.0",

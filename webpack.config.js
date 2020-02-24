@@ -1,11 +1,12 @@
-const path = require('path')
+const path = require("path");
 
 module.exports = {
-    target: 'node',
-    entry: {
-        app: './server.js'
-    },
-    output: {
-        filename: '[name].js',
-    }
+  target: "node",
+  entry: {
+    app: "./server.js"
+  },
+  output: {
+    filename: "[name].js"
+  },
+  watch: true
 };

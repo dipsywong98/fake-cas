@@ -5,6 +5,8 @@ WORKDIR /usr/src/app
 
 COPY . /usr/src/app
 
-EXPOSE 3000
+RUN npm i
 
-CMD [ "node", "./dist/app.js" ]
+EXPOSE 3030
+
+CMD [ "nodemon", "./server.js" ]
