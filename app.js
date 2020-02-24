@@ -1,9 +1,10 @@
 const express = require('express')
-const bodyParser = require('body-parser')
+const xmlparser = require('express-xml-bodyparser');
 const uuid = require('node-uuid')
 const cookieParser = require('cookie-parser')
 
 var app = express()
+app.use(xmlparser());
 app.use(cookieParser())
 
 var tickets = {}
