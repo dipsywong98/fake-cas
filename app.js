@@ -64,8 +64,8 @@ app.use('/cas/logout', function (req, res) {
 
 app.post('/cas/samlValidate*', function (req, res) {
   let cookie = req.cookies['fake-cas']
-  console.log('samlValidate', req.method, req.originalUrl, req.query, req.body['soap-env:envelope']['soap-env:body'][0]['samlp:request'])
-  const ticket = req.body['soap-env:envelope']['soap-env:body'][0]['samlp:request']
+  console.log('samlValidate', req.method, req.originalUrl, req.query, req.body['soap-env:envelope']['soap-env:body'][0]['samlp:request'][0]['samlp:assertionartifact'][0])
+  const ticket = req.body['soap-env:envelope']['soap-env:body'][0]['samlp:request'][0]['samlp:assertionartifact'][0]
   if (tickets[ticket]) {
     console.log('validate success', tickets[ticket])
     res.send(`
