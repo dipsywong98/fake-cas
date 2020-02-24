@@ -2,6 +2,7 @@ const express = require('express')
 const xmlparser = require('express-xml-bodyparser');
 const uuid = require('node-uuid')
 const cookieParser = require('cookie-parser')
+const bodyParser = require('body-parser')
 
 var app = express()
 app.use(xmlparser());
