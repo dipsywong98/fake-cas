@@ -71,8 +71,8 @@ app.post('/cas/samlValidate*', function (req, res) {
     res.send(`
 <Envelope>
     <NameIdentifier nam="NAME, ${tickets[ticket]}">${tickets[ticket]}</NameIdentifier>
-    <Attribute AttributeName="name" AttributeNamespace="http://www.ja-sig.org/products/cas/">
-      <AttributeValue>NAME, ${tickets[ticket]}</AttributeValue>
+    <Attribute AttributeName="name">
+      <saml:AttributeValue AttributeName="name">NAME, ${tickets[ticket]}</saml:AttributeValue>
     </Attribute>
 </Envelope>
 `)
