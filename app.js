@@ -71,6 +71,9 @@ app.post('/cas/samlValidate*', function (req, res) {
     res.send(`
 <Envelope>
     <NameIdentifier>${tickets[ticket]}</NameIdentifier>
+    <Attribute AttributeName="name" AttributeNamespace="http://www.ja-sig.org/products/cas/">
+      <AttributeValue>NAME, ${tickets[ticket]}</AttributeValue>
+    </Attribute>
 </Envelope>
 `)
     delete tickets[req.query.ticket]
