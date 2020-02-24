@@ -48,7 +48,7 @@ app.post('/cas/login', bodyParser.urlencoded(), function (req, res) {
   }
 })
 
-app.post('/cas/logout', function (req, res) {
+app.use('/cas/logout', function (req, res) {
   let cookie = req.cookies['fake-cas']
   console.log('log out', cookie, cookie && cookies[cookie])
   if (cookie && cookies[cookie]) {
