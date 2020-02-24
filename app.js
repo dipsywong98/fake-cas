@@ -14,7 +14,7 @@ app.get('/cas/login', function (req, res) {
   console.log('get login', cookie, cookie && cookies[cookie], req.query.service)
   if (cookie && cookies[cookie]) {
     if (req.query.service) {
-      var ticket = 'ST-' + uuid.v1()
+      var ticket = 'ST-' + uuid.v1() + '-user=' + cookies[cookie]
       tickets[ticket] = cookies[cookie]
       var url = new URL(req.query.service)
       url.searchParams.append('ticket', ticket)
@@ -37,7 +37,7 @@ app.post('/cas/login', bodyParser.urlencoded(), function (req, res) {
   res.cookie('fake-cas', cookie)
   if (req.query.service) {
     var ticket = 'ST-' + uuid.v1()
-    tickets[ticket] = req.body.login
+    tickets[ticket] = req.body.login+ '-user=' + cookies[cookie]
     var url = new URL(req.query.service)
     url.searchParams.append('ticket', ticket)
     res.writeHead(302, {

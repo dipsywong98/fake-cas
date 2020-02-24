@@ -37,6 +37,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="XML" />
     <property name="javascript.nodejs.core.library.configured.version" value="13.9.0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -166,7 +167,7 @@
       <option name="presentableId" value="Default" />
       <updated>1582432720789</updated>
       <workItem from="1582432722629" duration="17009000" />
-      <workItem from="1582528491752" duration="7270000" />
+      <workItem from="1582528491752" duration="10796000" />
     </task>
     <servers />
   </component>
