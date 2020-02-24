@@ -72,7 +72,7 @@ app.post('/cas/samlValidate*', function (req, res) {
 <Envelope>
     <NameIdentifier nam="NAME, ${tickets[ticket]}">${tickets[ticket]}</NameIdentifier>
     <Attribute AttributeName="name">
-      <saml:AttributeValue AttributeName="name">NAME, ${tickets[ticket]}</saml:AttributeValue>
+      <AttributeValue AttributeName="name">NAME, ${tickets[ticket]}</AttributeValue>
     </Attribute>
 </Envelope>
 `)
