@@ -48,14 +48,14 @@ app.post('/cas/login', bodyParser.urlencoded(), function (req, res) {
   }
 })
 
-app.use('/cas/logout', function (req, res) {
-  if (req.cookies['fake-cas'] && cookies[req.cookies['fake-cas']]) {
-    delete cookies[req.cookies['fake-cas']]
+app.post('/cas/logout', function (req, res) {
+  let cookie = req.cookies['fake-cas']
+  console.log('log out', cookie, cookie && cookies[cookie])
+  if (cookie && cookies[cookie]) {
+    delete cookies[cookie]
   }
   res.cookie('fake-cas', '')
-  res.writeHead(302, {
-    Location: '/cas/login'
-  })
+  res.send('logged out')
   res.end()
 })
 

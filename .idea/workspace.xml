@@ -11,17 +11,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="afeb414d-bdb1-47df-aa39-174fcf2fe45a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deployed.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/makecert.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ssl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/start.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amd64.Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/arm64v8.Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/already.html" beforeDir="false" afterPath="$PROJECT_DIR$/already.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,7 +167,7 @@
       <option name="presentableId" value="Default" />
       <updated>1582432720789</updated>
       <workItem from="1582432722629" duration="17009000" />
-      <workItem from="1582528491752" duration="2738000" />
+      <workItem from="1582528491752" duration="4725000" />
     </task>
     <servers />
   </component>
