@@ -33,6 +33,7 @@ app.get('/cas/login', function (req, res) {
 app.post('/cas/login', bodyParser.urlencoded(), function (req, res) {
   var cookie = uuid.v1()
   cookies[cookie] = req.body.login
+  console.log('post login', cookie, cookie && cookies[cookie], req.query.service)
   res.cookie('fake-cas', cookie)
   if (req.query.service) {
     var ticket = 'ST-' + uuid.v1()
@@ -60,18 +61,32 @@ app.use('/cas/logout', function (req, res) {
 })
 
 app.post('/cas/samlValidate*', function (req, res) {
+  let cookie = req.cookies['fake-cas']
   console.log('samlValidate', req.method, req.originalUrl, req.query, req.body)
   if (tickets[req.query.ticket]) {
-    res.send(`yes\n${tickets[req.query.ticket]}`)
-    delete tickets[req.query.ticket]
-  } else {
+    console.log('validate success', tickets[req.query.ticket])
     res.send(`
 <Envelope>
-    <NameIdentifier>~laravel</NameIdentifier>
+    <NameIdentifier>${tickets[req.query.ticket]}</NameIdentifier>
+</Envelope>
+`)
+    delete tickets[req.query.ticket]
+  } else {
+    console.log('validate fail')
+    res.send(`
+<Envelope>
+    <NameIdentifier>${cookies[cookie]}</NameIdentifier>
 </Envelope>
 `)
   }
   res.end()
+})
+
+app.get('/',(req,res) => {
+  res.json({
+    tickets,
+    cookies
+  })
 })
 
 module.exports = app
