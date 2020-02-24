@@ -70,7 +70,7 @@ app.post('/cas/samlValidate*', function (req, res) {
     console.log('validate success', tickets[ticket])
     res.send(`
 <Envelope>
-    <NameIdentifier>${tickets[ticket]}</NameIdentifier>
+    <NameIdentifier nam="NAME, ${tickets[ticket]}">${tickets[ticket]}</NameIdentifier>
     <Attribute AttributeName="name" AttributeNamespace="http://www.ja-sig.org/products/cas/">
       <AttributeValue>NAME, ${tickets[ticket]}</AttributeValue>
     </Attribute>
