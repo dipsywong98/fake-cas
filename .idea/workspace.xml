@@ -11,6 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="afeb414d-bdb1-47df-aa39-174fcf2fe45a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,6 +49,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="C:/Program Files/nodejs/node" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -117,44 +119,6 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Docker" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Docker" type="9fbbdea:ServiceModel$ServiceNode" />
-                <item name="uwr-reg" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Docker" type="9fbbdea:ServiceModel$ServiceNode" />
-                <item name="uwr-reg" type="9fbbdea:ServiceModel$ServiceNode" />
-                <item name="db" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Docker" type="9fbbdea:ServiceModel$ServiceNode" />
-                <item name="Containers" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Docker" type="9fbbdea:ServiceModel$ServiceNode" />
-                <item name="Images" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
-            </expand>
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -167,6 +131,10 @@
       <updated>1582432720789</updated>
       <workItem from="1582432722629" duration="17009000" />
       <workItem from="1582528491752" duration="19089000" />
+      <workItem from="1582603818783" duration="170000" />
+      <workItem from="1582604003836" duration="52000" />
+      <workItem from="1582604067613" duration="2767000" />
+      <workItem from="1582609767087" duration="649000" />
     </task>
     <servers />
   </component>
@@ -189,6 +157,10 @@
       <screen x="0" y="1080" width="1920" height="1080" />
     </state>
     <state x="800" y="1432" key="#Docker_Registry/0.1080.1920.1080/0.0.1920.1080@0.1080.1920.1080" timestamp="1582441570305" />
+    <state x="557" y="1244" key="#Plugins" timestamp="1582604560161">
+      <screen x="0" y="1080" width="1920" height="1080" />
+    </state>
+    <state x="557" y="1244" key="#Plugins/0.1080.1920.1080/0.0.1920.1080@0.1080.1920.1080" timestamp="1582604560161" />
     <state x="756" y="1503" key="#Push_Image" timestamp="1582441588139">
       <screen x="0" y="1080" width="1920" height="1080" />
     </state>
@@ -197,14 +169,18 @@
       <screen x="0" y="1080" width="1920" height="1080" />
     </state>
     <state x="666" y="1396" key="#com.intellij.fileTypes.FileTypeChooser/0.1080.1920.1080/0.0.1920.1080@0.1080.1920.1080" timestamp="1582443630724" />
+    <state x="713" y="1471" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1582609454546">
+      <screen x="0" y="1080" width="1920" height="1080" />
+    </state>
+    <state x="713" y="1471" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.1080.1920.1080/0.0.1920.1080@0.1080.1920.1080" timestamp="1582609454546" />
     <state x="695" y="1348" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1582531128835">
       <screen x="0" y="1080" width="1920" height="1080" />
     </state>
     <state x="695" y="1348" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.1080.1920.1080/0.0.1920.1080@0.1080.1920.1080" timestamp="1582531128835" />
-    <state x="745" y="1358" key="FileChooserDialogImpl" timestamp="1582446031909">
+    <state x="745" y="1358" key="FileChooserDialogImpl" timestamp="1582603983630">
       <screen x="0" y="1080" width="1920" height="1080" />
     </state>
-    <state x="745" y="1358" key="FileChooserDialogImpl/0.1080.1920.1080/0.0.1920.1080@0.1080.1920.1080" timestamp="1582446031909" />
+    <state x="745" y="1358" key="FileChooserDialogImpl/0.1080.1920.1080/0.0.1920.1080@0.1080.1920.1080" timestamp="1582603983630" />
     <state width="1872" height="272" key="GridCell.Tab.0.bottom" timestamp="1582470417505">
       <screen x="0" y="1080" width="1920" height="1080" />
     </state>
@@ -221,5 +197,13 @@
       <screen x="0" y="1080" width="1920" height="1080" />
     </state>
     <state width="1872" height="272" key="GridCell.Tab.0.right/0.1080.1920.1080/0.0.1920.1080@0.1080.1920.1080" timestamp="1582470417505" />
+    <state x="594" y="1228" key="SettingsEditor" timestamp="1582610143688">
+      <screen x="0" y="1080" width="1920" height="1080" />
+    </state>
+    <state x="594" y="1228" key="SettingsEditor/0.1080.1920.1080/0.0.1920.1080@0.1080.1920.1080" timestamp="1582610143688" />
+    <state x="557" y="1336" key="Vcs.Push.Dialog.v2" timestamp="1582604498222">
+      <screen x="0" y="1080" width="1920" height="1080" />
+    </state>
+    <state x="557" y="1336" key="Vcs.Push.Dialog.v2/0.1080.1920.1080/0.0.1920.1080@0.1080.1920.1080" timestamp="1582604498222" />
   </component>
 </project>
