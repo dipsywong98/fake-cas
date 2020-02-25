@@ -151,11 +151,4 @@ app.post('/cas/samlValidate*', function (req, res) {
   res.end()
 })
 
-app.get('/',(req,res) => {
-  res.json({
-    tickets,
-    cookies
-  })
-})
-
 module.exports = app
