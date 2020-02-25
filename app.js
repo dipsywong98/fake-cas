@@ -3,22 +3,23 @@ const xmlparser = require('express-xml-bodyparser');
 const uuid = require('node-uuid')
 const cookieParser = require('cookie-parser')
 const bodyParser = require('body-parser')
+const URL = require('url').URL
 
-var app = express()
+const app = express()
 app.use(xmlparser());
 app.use(cookieParser())
 
-var tickets = {}
-var cookies = {}
+const tickets = {}
+const cookies = {}
 
 app.get('/cas/login', function (req, res) {
   let cookie = req.cookies['fake-cas']
   console.log('get login', cookie, cookie && cookies[cookie], req.query.service)
   if (cookie && cookies[cookie]) {
     if (req.query.service) {
-      var ticket = 'ST-' + uuid.v1()
+      const ticket = 'ST-' + uuid.v1()
       tickets[ticket] = cookies[cookie]
-      var url = new URL(req.query.service)
+      const url = new URL(req.query.service)
       url.searchParams.append('ticket', ticket)
       res.writeHead(302, {
         Location: url.toString()
@@ -33,14 +34,14 @@ app.get('/cas/login', function (req, res) {
 })
 
 app.post('/cas/login', bodyParser.urlencoded(), function (req, res) {
-  var cookie = uuid.v1()
+  const cookie = uuid.v1()
   cookies[cookie] = req.body.login
   console.log('post login', cookie, cookie && cookies[cookie], req.query.service)
   res.cookie('fake-cas', cookie)
   if (req.query.service) {
-    var ticket = 'ST-' + uuid.v1()
+    const ticket = 'ST-' + uuid.v1()
     tickets[ticket] = req.body.login
-    var url = new URL(req.query.service)
+    const url = new URL(req.query.service)
     url.searchParams.append('ticket', ticket)
     res.writeHead(302, {
       Location: url.toString()
