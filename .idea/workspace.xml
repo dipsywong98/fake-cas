@@ -11,8 +11,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="afeb414d-bdb1-47df-aa39-174fcf2fe45a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/dipsy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/fake-cas.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/fake-cas.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deployed.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/form.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +42,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="XML" />
@@ -49,7 +57,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="C:/Program Files/nodejs/node" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Console Colors" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -134,7 +142,7 @@
       <workItem from="1582603818783" duration="170000" />
       <workItem from="1582604003836" duration="52000" />
       <workItem from="1582604067613" duration="2767000" />
-      <workItem from="1582609767087" duration="649000" />
+      <workItem from="1582609767087" duration="4984000" />
     </task>
     <servers />
   </component>
@@ -197,13 +205,17 @@
       <screen x="0" y="1080" width="1920" height="1080" />
     </state>
     <state width="1872" height="272" key="GridCell.Tab.0.right/0.1080.1920.1080/0.0.1920.1080@0.1080.1920.1080" timestamp="1582470417505" />
-    <state x="594" y="1228" key="SettingsEditor" timestamp="1582610143688">
+    <state x="589" y="1254" key="SettingsEditor" timestamp="1582615283707">
       <screen x="0" y="1080" width="1920" height="1080" />
     </state>
-    <state x="594" y="1228" key="SettingsEditor/0.1080.1920.1080/0.0.1920.1080@0.1080.1920.1080" timestamp="1582610143688" />
+    <state x="589" y="1254" key="SettingsEditor/0.1080.1920.1080/0.0.1920.1080@0.1080.1920.1080" timestamp="1582615283707" />
     <state x="557" y="1336" key="Vcs.Push.Dialog.v2" timestamp="1582604498222">
       <screen x="0" y="1080" width="1920" height="1080" />
     </state>
     <state x="557" y="1336" key="Vcs.Push.Dialog.v2/0.1080.1920.1080/0.0.1920.1080@0.1080.1920.1080" timestamp="1582604498222" />
+    <state x="621" y="777" key="run.anything.popup" timestamp="1582614984555">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="621" y="777" key="run.anything.popup/0.1080.1920.1080/0.0.1920.1080@0.1080.1920.1080" timestamp="1582614984555" />
   </component>
 </project>

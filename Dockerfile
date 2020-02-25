@@ -9,4 +9,4 @@ RUN npm i
 
 EXPOSE 3030
 
-CMD [ "nodemon", "./server.js" ]
+CMD [ "node", "./server.js" ]

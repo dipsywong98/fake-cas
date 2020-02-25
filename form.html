@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=no">
     <title>FAKE CAS</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   </head>
   <body>
     <style>
@@ -60,7 +61,6 @@
         margin: 1px;
       }
       #prefered > button > input {
-        display: none;
         background-color: transparent;
         position: absolute;
         top: 0;
@@ -91,63 +91,74 @@
           padding: 45px 5px;
         }
       }
+
+
     </style>
-    <div class="login-page">
+    <div class="login-page" id="app">
       <div class="form">
-        <h3>fake-cas</h3>
-        <div id="prefered"></div>
-        <form id="form" class="login-form" method="post">
-          <input type="text" id="login" name="login" placeholder="login">
-          <button>Login</button>
-        </form>
-        <a href="#" id="addPreferedLogin">Add prefered login</a>
+        <h1>fake-cas</h1>
+        <div class="form-flex">
+          <div class="form-fox">
+            <h3>Fast Login</h3>
+            <div id="prefered">
+              <button v-for="itsc in users" @click="login(itsc)">
+                {{itsc}}
+                <input type="button" @click="event=>removeUser(event, itsc)" value="-"/>
+              </button>
+            </div>
+          </div>
+          <div class="form-fox">
+            <h3>New User</h3>
+            <div id="form" class="login-form" method="post">
+              <input id="login" placeholder="itsc" v-model="itsc">
+              <button ref="loginButton" @click="login(itsc)">Login</button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <script type="text/javascript">
-      var addPreferedLogin = function (login) {
-        var element = document.createElement("button");
-        element.innerText = login;
-        element.onclick = function () {
-          document.getElementById("login").value = login;
-          document.getElementById("form").submit();
-        };
-        var suppBtn = document.createElement("input");
-        suppBtn.type = 'button';
-        suppBtn.value = "-";
-        suppBtn.onclick = function (e) {
-          e.stopPropagation();
-          var logins = JSON.parse(window.localStorage.getItem('fake-cas:prefered-logins')) || [];
-          var found = logins.indexOf(login);
-          while (found !== -1) {
-            logins.splice(found, 1);
-            found = logins.indexOf(login);
+      let app = new Vue({
+        el: '#app',
+        mounted(){
+          const logins = JSON.parse(window.localStorage.getItem('fake-cas:prefered-logins')) || [];
+          this.users.push(...logins.filter(itsc => this.users.indexOf(itsc) === -1))
+        },
+        data: {
+          itsc: '',
+          users: ['~admin', '~teacher', '~student']
+        },
+        methods: {
+          addUser(itsc) {
+            if(this.users.indexOf(itsc) === -1){
+              this.users = [...this.users, itsc]
+            }
+            this.store()
+          },
+          removeUser(event, itsc) {
+            event.stopPropagation()
+            this.users = this.users.filter((i) => i !== itsc)
+            this.store()
+          },
+          login(itsc){
+            this.addUser(itsc)
+            const form = document.createElement('form')
+            form.method = 'POST';
+            form.action = window.location.href;
+            const field = document.createElement('input')
+            field.type = 'text'
+            field.name = 'login'
+            field.value = itsc
+            form.appendChild(field)
+            form.style.display = 'none'
+            document.body.appendChild(form)
+            form.submit()
+          },
+          store(){
+            window.localStorage.setItem('fake-cas:prefered-logins', JSON.stringify(this.users));
           }
-          window.localStorage.setItem('fake-cas:prefered-logins', JSON.stringify(logins));
-          initPrefered()
-        };
-        element.appendChild(suppBtn);
-        document.getElementById("prefered").appendChild(element);
-      };
-      var initPrefered = function (clear) {
-        var container = document.getElementById("prefered");
-        while (container.firstChild) {
-          container.removeChild(container.firstChild);
         }
-        var logins = JSON.parse(window.localStorage.getItem('fake-cas:prefered-logins')) || [];
-        logins.forEach(function (login) {
-          addPreferedLogin(login);
-        });
-      };
-      document.getElementById("addPreferedLogin").addEventListener("click", function () {
-        var login = prompt("Please enter login");
-        if (login) {
-          addPreferedLogin(login);
-          var logins = JSON.parse(window.localStorage.getItem('fake-cas:prefered-logins')) || []
-          logins.push(login);
-          window.localStorage.setItem('fake-cas:prefered-logins', JSON.stringify(logins));
-        }
-      });
-      initPrefered();
+      })
     </script>
   </body>
 </html>

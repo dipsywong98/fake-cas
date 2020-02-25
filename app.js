@@ -58,8 +58,7 @@ app.use('/cas/logout', function (req, res) {
     delete cookies[cookie]
   }
   res.cookie('fake-cas', '')
-  res.send('logged out')
-  res.end()
+  res.sendFile(process.cwd() + '/logout.html')
 })
 
 app.post('/cas/samlValidate*', function (req, res) {
@@ -136,7 +135,7 @@ app.post('/cas/samlValidate*', function (req, res) {
                         <saml1:AttributeValue>LdapAuthenticationHandler</saml1:AttributeValue>
                     </saml1:Attribute>
                     <saml1:Attribute AttributeName="name" AttributeNamespace="http://www.ja-sig.org/products/cas/">
-                        <saml1:AttributeValue>NAME, ${tickets[ticket]}</saml1:AttributeValue>
+                        <saml1:AttributeValue>${tickets[ticket].toUpperCase()}, ${tickets[ticket]}</saml1:AttributeValue>
                     </saml1:Attribute>
                 </saml1:AttributeStatement>
             </saml1:Assertion>
